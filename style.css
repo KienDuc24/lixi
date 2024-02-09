@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: bisque;
+    background-image: url("./img/Tet.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+}
+
+button{
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    transform: translate(70px,-60px);
+    width: 140px;
+    height: 60px;
+    font-size: large;
+    border-radius: 16px;
+    box-shadow: -3px 5px black;
+    font-weight: bold;
+    background-color: rgb(223, 222, 137);
+    z-index: 100000;
+    display: block;
+}
+
+button:hover{
+    padding: 5px;
+    background-color: burlywood;
+}
+
+@font-face {
+    font-family: font;
+    src: url("./PlayfairDisplay-MediumItalic.ttf");
+}
+
+p#text {
+    display: none;
+    font-family: font;
+    text-align: center;
+    font-size: 50px;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -200px;
+}
+
+img#punch {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 75%;
+}
+
+/* ANIMATION */
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+.flip-horizontal-bottom {
+	animation: flip-horizontal-bottom 1.5s cubic-bezier(1,1,1,1) ;
+}
+
+@keyframes flip-horizontal-bottom {
+    0% {
+      transform: rotateX(0);
+      height: 1%;
+      width: 1%;
+    }
+    100% {
+      transform: rotateX(100px);
+    }
+  }
+  
